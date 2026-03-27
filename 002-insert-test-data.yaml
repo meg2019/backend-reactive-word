@@ -1,0 +1,97 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-insert-test-concepts
+      author: developer
+      changes:
+        - insertMany:
+            collectionName: concepts
+            documents: |
+              [
+                {
+                  "topic": {
+                    "name": "Поликлиника",
+                    "description": "место для первичной диагностики заболеваний"
+                  },
+                  "words": [
+                    {
+                      "language": "ru",
+                      "text": "Регистратура"
+                    },
+                    {
+                      "language": "he",
+                      "text": "מזכירות"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Поликлиника",
+                    "description": "место для первичной диагностики заболеваний"
+                  },
+                  "words": [
+                    {
+                      "language": "ru",
+                      "text": "Температура"
+                    },
+                    {
+                      "language": "he",
+                      "text": "חום"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Поликлиника",
+                    "description": "место для первичной диагностики заболеваний"
+                  },
+                  "words": [
+                    {
+                      "language": "ru",
+                      "text": "Направление"
+                    },
+                    {
+                      "language": "he",
+                      "text": "הפניה"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Часто используемые глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "ru",
+                      "text": "Брать/Покупать"
+                    },
+                    {
+                      "language": "he",
+                      "text": "לָקַחַת"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Часто используемые глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "ru",
+                      "text": "Подниматься"
+                    },
+                    {
+                      "language": "he",
+                      "text": "לַעֲלוֹת"
+                    }
+                  ]
+                }
+              ]
+      rollback:
+        - runCommand:
+            command: |
+              {
+                "delete": "concepts",
+                "deletes": [{ "q": {}, "limit": 0 }]
+              }

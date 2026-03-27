@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-concepts-collection
+      author: developer
+      changes:
+        - createCollection:
+            collectionName: concepts
+            options: |
+              {
+                "validator": {
+                  "$jsonSchema": {
+                    "bsonType": "object",
+                    "required": ["topic", "words"],
+                    "properties": {
+                      "topic": {
+                        "bsonType": "object",
+                        "required": ["name", "description"],
+                        "properties": {
+                          "name": {
+                            "bsonType": "string",
+                            "description": "Name of the topic"
+                          },
+                          "description": {
+                            "bsonType": "string",
+                            "description": "Description of the topic"
+                          }
+                        }
+                      },
+                      "words": {
+                        "bsonType": "array",
+                        "description": "List of words associated with the concept",
+                        "items": {
+                          "bsonType": "object",
+                          "properties": {
+                            "language": {
+                              "bsonType": "string",
+                              "description": "ISO 639-1 language code for the word"
+                            },
+                            "text": {
+                              "bsonType": "string",
+                              "description": "The word text"
+                            },
+                            "partOfSpeech": {
+                              "bsonType": "string",
+                              "description": "Part of speech classification for the word"
+                            },
+                            "comment": {
+                              "bsonType": "string",
+                              "description": "Additional comment about the word"
+                            },
+                            "audioUrl": {
+                              "bsonType": "string",
+                              "description": "URL to an audio file for pronunciation"
+                            }
+                          }
+                        }
+                      },
+                      "comment": {
+                        "bsonType": "string",
+                        "description": "Additional comment about the concept"
+                      }
+                    }
+                  }
+                }
+              }

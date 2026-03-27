@@ -1,0 +1,1917 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-hebrew-verbs
+      author: developer
+      changes:
+        - insertMany:
+            collectionName: concepts
+            documents: |
+              [
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִהְיוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י/ל\"ה). Неправильный, используется для построения времен; Я буду здесь завтра. (אֲנִי אֶהְיֶה כָּאן מָחָר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Быть",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לוֹמַר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). В настоящем времени: אומר (омэр); Я хочу сказать тебе что-то. (אֲנִי רוֹצֶה לוֹמַר לְךָ מַשֶּׁהוּ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Сказать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָבוֹא",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). אֶל/לְ Используется с предлогом Они приходят домой поздно. (הֵם בָּאִים הַבַּיְתָה מְאוּחָר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Приходить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָלֶכֶת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). В прошедшем: הָלַכְתִי (hала́хти); Мы идем в парк. (אֲנַחְנוּ הוֹלְכִים לַפָּארְק.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Идти/Ходить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲשׂוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Один из самых важных глаголов; Что ты делаешь? (מָה אַתָּה עוֹשֶׂה?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Делать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָתֵת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י/פ\"נ). נ.ת.נ Неправильный, корень; Она дает мне книгу. (הִיא נוֹתֶנֶת לִי סֵפֶר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Давать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָקַחַת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). ל.ק.ח Неправильный, корень; Я возьму это сейчас. (אֲנִי אֶקַּח אֶת זֶה עַכְשָׁיו.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Брать/Покупать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָדַעַת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Знать факт, информацию; Ты знаешь ответ? (אַתָּה יוֹדֵעַ אֶת הַתְּשׁוּבָה?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Знать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לֶאֱכֹל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"א). א – гортанная буква; Что ты ешь на завтрак? (מָה אַתָּה אוֹכֵל בָּאֲרוּחַת בֹּקֶר?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Есть (кушать)",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִשְׁתוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Я пью воду каждый день. (אֲנִי שׁוֹתֶה מַיִם כָּל יוֹם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Пить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִרְאוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Он видит свой дом издалека. (הוּא רוֹאֶה אֶת בֵּיתוֹ מֵרָחוֹק.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Видеть",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִשְׁמֹעַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ג). ע – гортанная буква; Я слышу музыку. (אֲנִי שׁוֹמֵעַ מוּזִיקָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Слышать/Слушать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִכְתּוֹב",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). «Шалэм» – правильный корень; Она пишет письмо. (הִיא כּוֹתֶבֶת מִכְתָּב.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Писать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִקְרֹא",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"א). א – гортанная буква; Я читаю эту книгу. (אֲנִי קוֹרֵא אֶת הַסֵּפֶר הַזֶּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Читать/Звать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָשֶׁבֶת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). Они сидят в кафе. (הֵם יוֹשְׁבִים בְּבֵית קָפֶה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Сидеть",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲמֹד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ג). ע – гортанная буква; Она стоит у двери. (הִיא עוֹמֶדֶת לְיַד הַדֶּלֶת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Стоять",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָגוּר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). קו\"ף (Kuf); Где ты живешь? (אֵיפֹה אַתָּה גָּר?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Жить/Проживать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִישׁוֹן",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). Я сплю восемь часов. (אֲנִי יָשֵׁן שְׁמוֹנֶה שָׁעוֹת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Спать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲבֹד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ג). Где ты работаешь? (אֵיפֹה אַתָּה עוֹבֵד?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Работать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִרְצוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Я хочу пить. (אֲנִי רוֹצֶה לִשְׁתּוֹת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Хотеть",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לֶאֱהֹב",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"א). Я люблю Израиль. (אֲנִי אוֹהֵב אֶת יִשְׂרָאֵל.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Любить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַחֲשׁוֹב",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). О чем ты думаешь? (עַל מָה אַתָּה חוֹשֵׁב?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Думать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִשְׁאֹל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"א). Я хочу спросить тебя о многом. (אֲנִי רוֹצֶה לִשְׁאֹל אוֹתְךָ הַרְבֵּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Спрашивать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲנוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Пожалуйста, ответь мне! (בְּבַקָּשָׁה, תַּעֲנֶה לִי!)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Отвечать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִפְתּוֹחַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ח). ח – гортанная буква; Он открывает окно. (הוּא פּוֹתֵחַ אֶת הַחַלּוֹן.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Открывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִסְגּוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Мне нужно закрыть дверь. (אֲנִי צָרִיךְ לִסְגּוֹר אֶת הַדֶּלֶת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Закрывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִקְנוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Я покупаю новую машину. (אֲנִי קוֹנֶה מְכוֹנִית חֲדָשָׁה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Покупать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִמְכּוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Они продают свой дом. (הֵם מוֹכְרִים אֶת הַבַּיִת שֶׁלָּהֶם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Продавать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲלוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Также \"делать алию\"; Он поднимается по лестнице. (הוּא עוֹלֶה בַּמַּדְרֵגוֹת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Подниматься",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָרֶדֶת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Она спускается вниз. (הִיא יוֹרֶדֶת לְמַטָּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Спускаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִבְכּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Почему ребенок плачет? (לָמָּה הַיֶּלֶד בּוֹכֶה?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Плакать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִצְחֹק",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Он много смеется. (הוּא צוֹחֵק הַרְבֵּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Смеяться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִפְחֹד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Не бойся! (אַל תִּפְחַד!)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Бояться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְחַפֵּשׂ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Интенсивное действие; Я ищу ключи. (אֲנִי מְחַפֵּשׂ אֶת הַמַּפְתְּחוֹת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Искать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְדַבֵּר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Самый частый глагол для \"говорить\"; Я говорю на иврите. (אֲנִי מְדַבֵּר עִבְרִית.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Говорить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְשַׁלֵּם",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Мне нужно заплатить за ужин. (אֲנִי צָרִיךְ לְשַׁלֵּם עַל הָאֲרוּחָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Платить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְסַפֵּר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Расскажи мне историю! (סַפֵּר לִי סִיפּוּר!)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Рассказывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְקַבֵּל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Она получает подарок. (הִיא מְקַבֶּלֶת מַתָּנָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Получать/Принимать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְבַקֵּר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Мы посетим бабушку. (אֲנַחְנוּ נְבַקֵּר אֶת סָבְתָא.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Посещать/Навещать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְקַווֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ע\"ו/ע\"י). Я надеюсь, что все будет хорошо. (אֲנִי מְקַוֶּוה שֶׁהַכֹּל יִהְיֶה בְּסֵדֶר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Надеется",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְלַמֵּד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Он преподает математику. (הוּא מְלַמֵּד מָתֶמָטִיקָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Учить/Преподавать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְנַסוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ל\"ה). Попробуй еще раз. (תְּנַסֶּה עוֹד פַּעַם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Пробовать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְסַיֵּם",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ע\"ו/ע\"י). Я заканчиваю работу в пять. (אֲנִי מְסַיֵּם אֶת הָעֲבוֹדָה בְּחָמֵשׁ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Заканчивать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְחַכּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ל\"ה). Я жду тебя. (אֲנִי מְחַכֶּה לְךָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Ждать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַתְחִיל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"ת). «hетфи́ль»; Мы начинаем урок. (אֲנַחְנוּ מַתְחִילִים אֶת הַשִּׁיעוּר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Начинать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַסְבִּיר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Причинно-следственный биньян; Объясни мне это правило. (תַּסְבִּיר לִי אֶת הַכְּלָל הַזֶּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Объяснять",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהָבִיא",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"י). Корень ב.ו.א; Принеси мне стакан воды. (תָּבִיא לִי כּוֹס מַיִם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Приносить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַרְגִּישׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Как ты себя чувствуешь? (אֵיךְ אַתָּה מַרְגִּישׁ?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Чувствовать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַעֲדִיף",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"א). Я предпочитаю кофе. (אֲנִי מַעֲדִיף קָפֶה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Предпочитать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַזְמִין",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Мы приглашаем друзей на ужин. (אֲנַחְנוּ מַזְמִינִים חֲבֵרִים לַאֲרוּחַת עֶרֶב.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Приглашать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַמְשִׁיךְ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Продолжай читать. (תַּמְשִׁיךְ לִקְרוֹא.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Продолжать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַדְלִיק",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Включи свет. (תַּדְלִיק אֶת הָאוֹר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Зажигать/Включать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְכַבּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ל\"ה). Выключи свет. (תְּכַבֶּה אֶת הָאוֹר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Выключать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהָבִין",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"י). Ты понимаешь меня? (אַתָּה מֵבִין אוֹתִי?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Понимать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַסְכִּים",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Я не согласен с тобой. (אֲנִי לֹא מַסְכִּים אִיתְךָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Соглашаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַחְלִיט",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Я решил поехать в Иерусалим. (אֲנִי הֶחְלַטְתִּי לִנְסוֹעַ לִירוּשָׁלַיִם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Решать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִיכָּנֵס",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Nif'al (שלם). Пассивный/Рефлексивный; Я вошел в комнату. (אֲנִי נִכְנַסְתִּי לַחֶדֶר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Входить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִיפָּגֵשׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Nif'al (פ\"ג). Корень פ.ג.ש; Мы встречаемся в парке. (אֲנַחְנוּ נִפְגָּשִׁים בַּפָּארְק.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Встречаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִישָׁאֵר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Nif'al (שלם). Он останется дома. (הוּא יִשָּׁאֵר בַּבַּיִת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Оставаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִיוָולֵד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Nif'al (פ\"י). Я родился в 1990 году. (אֲנִי נוֹלַדְתִּי בִּשְׁנַת 1990.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Рождаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִתְלַבֵּשׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (שלם). Рефлексивный; Одевайся быстро! (תִּתְלַבֵּשׁ מַהֵר!)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Одеваться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִתְפַּלֵּל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (שלם). Он молится три раза в день. (הוּא מִתְפַּלֵּל שָׁלוֹשׁ פְּעָמִים בַּיּוֹם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Молиться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִשְׁתַּמֵּשׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (שלם). Я пользуюсь компьютером. (אֲנִי מִשְׁתַּמֵּשׁ בַּמַּחְשֵׁב.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Пользоваться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִתְפַּתֵּחַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (שלם). Язык развивается. (הַשָּׂפָה מִתְפַּתַּחַת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Развиваться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִתְרַגֵּשׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (שלם). Я очень волнуюсь перед экзаменом. (אֲנִי מִתְרַגֵּשׁ מְאוֹד לִפְנֵי הַמִּבְחָן.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Волноваться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִתְעַנְיֵין",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (ע\"ו/ע\"י). Я интересуюсь историей. (אֲנִי מִתְעַנְיֵין בְּהִיסְטוֹרְיָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Интересоваться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִשְׁכֹּחַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ח). Я забыл твое имя. (אֲנִי שָׁכַחְתִּי אֶת הַשֵּׁם שֶׁלְּךָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Забывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִמְצוֹא",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"א). Я нашел ключи. (אֲנִי מָצָאתִי אֶת הַמַּפְתְּחוֹת.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Находить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִלְמֹד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Я учусь в университете. (אֲנִי לוֹמֵד בָּאוּנִיבֶרְסִיטָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Учиться (в школе/вузе)",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לָנוּחַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). Мне нужно отдохнуть. (אֲנִי צָרִיךְ לָנוּחַ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Отдыхать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְבַשֵּׁל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Она готовит ужин. (הִיא מְבַשֶּׁלֶת אֲרוּחַת עֶרֶב.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Приготовить (еду)",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַגִּיעַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"י). Мы приедем завтра. (אֲנַחְנוּ נַגִּיעַ מָחָר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Приехать/Доехать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲיֵיף",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"י). В прошедшем: עָיַיפְתִּי; Я очень устал. (אֲנִי מְאוֹד עָיֵיף.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Устать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַסְפִּיק",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Я не успеваю закончить. (אֲנִי לֹא מַסְפִּיק לְסַיֵּים.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Успевать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִגְדֹּל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Цветы растут быстро. (הַפְּרָחִים גְּדֵלִים מַהֵר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Расти",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְסַפֵּר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). То же, что \"рассказывать\", но с другим контекстом; Я стригу волосы. (אֲנִי מְסַפֵּר אֶת הַשֵּׂיעָר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Стричь",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲזוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). Ты можешь мне помочь? (אַתָּה יָכוֹל לַעֲזוֹר לִי?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Помогать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְאַבֵּד",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Он потерял кошелек. (הוּא אִיבֵּד אֶת הָאַרְנָק.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Терять/Проигрывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְנַצֵּחַ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Мы победим в игре. (אֲנַחְנוּ נְנַצֵּחַ בַּמִּשְׂחָק.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Побеждать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַזְמִין",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Я закажу столик в ресторане. (אֲנִי אַזְמִין שֻׁלְחָן בַּמִּסְעָדָה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Заказывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְשַׁנּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ע\"ו/ע\"י). Мне нужно поменять деньги. (אֲנִי צָרִיךְ לְשַׁנּוֹת כֶּסֶף.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Менять",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲבוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). Мы переезжаем в новый дом. (אֲנַחְנוּ עוֹבְרִים לְבַיִת חָדָשׁ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Переезжать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַאֲמִין",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"א). Я верю в тебя. (אֲנִי מַאֲמִין בְּךָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Верить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְקַוּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ל\"ה). Я надеюсь увидеть тебя. (אֲנִי מְקַוֶּוה לִרְאוֹת אוֹתְךָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Надеяться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַשְׁווֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (ל\"ה). Не сравнивай меня с ней. (אַל תַּשְׁוֶוה אוֹתִי אֵלֶיהָ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Сравнивать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִזְכּוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Я помню этот день. (אֲנִי זוֹכֵר אֶת הַיּוֹם הַזֶּה.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Запоминать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִגְמֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Когда ты закончишь? (מָתַי אַתָּה גּוֹמֵר?)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Заканчивать/Кончать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְשַׁנֵּן",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Зубрить, повторять Ей нужно выучить слова. (הִיא צְרִיכָה לְשַׁנֵּן אֶת הַמִּלִּים.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Учить (стихотворение)",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִבְנוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ל\"ה). Они строят новый дом. (הֵם בּוֹנִים בַּיִת חָדָשׁ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Строить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַהֲרוֹס",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (שלם). Война разрушила город. (הַמִּלְחָמָה הָרְסָה אֶת הָעִיר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Разрушать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לִיצוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (פ\"י). Художник создает красоту. (הָאוּמָּן יוֹצֵר יוֹפִי.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Создавать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְטַיֵּיל",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ע\"ו/ע\"י). Мы любим путешествовать по миру. (אֲנַחְנוּ אוֹהֲבִים לְטַיֵּיל בָּעוֹלָם.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Путешествовать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַחֲזוֹר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). Я вернусь вечером. (אֲנִי אֶחְזוֹר בָּעֶרֶב.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Возвращаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְמַהֵר",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Поторопись! (תְּמַהֵר!)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Спешить",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְתַקֵּן",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (שלם). Мне нужно отремонтировать машину. (אֲנִי צָרִיךְ לְתַקֵּן אֶת הָאוֹטוֹ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Ремонтировать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהַעֲנִישׁ",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (שלם). Учитель не наказывает учеников. (הַמּוֹרֶה לֹא מַעֲנִישׁ אֶת הַתַּלְמִידִים.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Наказывать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהָגֵן",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hif'il (פ\"נ). Мы должны защищать нашу страну. (אֲנַחְנוּ צְרִיכִים לְהָגֵן עַל הַמְּדִינָה שֶׁלָּנוּ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Защищать",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְהִצְטָרֵף",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Hitpa'el (פ\"צ). Ты можешь присоединиться к нам. (אַתָּה יָכוֹל לְהִצְטָרֵף אֵלֵינוּ.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Присоединяться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לְנַסּוֹת",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pi'el (ל\"ה). Я пытаюсь говорить на иврите. (אֲנִי מְנַסֶּה לְדַבֵּר עִבְרִית.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Пытаться",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                },
+                {
+                  "topic": {
+                    "name": "Глаголы",
+                    "description": "Важные глаголы"
+                  },
+                  "words": [
+                    {
+                      "language": "he",
+                      "text": "לַעֲזוֹב",
+                      "partOfSpeech": "verb",
+                      "comment": "Binyan: Pa'al (ע\"ו/ע\"י). Он покинул город. (הוּא עָזַב אֶת הָעִיר.)"
+                    },
+                    {
+                      "language": "ru",
+                      "text": "Покидать/Оставлять",
+                      "partOfSpeech": "verb"
+                    }
+                  ]
+                }
+              ]
+      rollback:
+        - runCommand:
+            command: |
+              {
+                "delete": "concepts",
+                "deletes": [{ "q": { "topic.name": "Глаголы" }, "limit": 0 }]
+              }

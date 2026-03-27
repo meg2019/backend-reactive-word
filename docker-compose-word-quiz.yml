@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+  # Quiz backend service
+  backend-reactive:
+    image: qaserfde/words-backend-reactive:1.0.0
+    container_name: quiz-backend
+    environment:
+      QUARKUS_MONGODB_CONNECTION_STRING: mongodb://mongodb-words:27017
+      QUARKUS_MONGODB_DATABASE: words
+    restart: always
+    depends_on:
+      mongodb-words:
+        condition: service_healthy
+    networks:
+      - quiz-network
+
+  # Quiz frontend service
+  frontend:
+    image: qaserfde/words-telegram-bot:2.0.0
+    container_name: quiz-frontend
+    restart: always
+    environment:
+      CAMEL.COMPONENT.TELEGRAM.AUTHORIZATION-TOKEN: ${TELEGRAM_BOT_TOKEN}
+      QUARKUS.GRPC.CLIENTS.WORD-SERVICE.HOST: backend-reactive
+      QUARKUS.GRPC.CLIENTS.WORD-SERVICE.PORT: 9000
+    depends_on:
+      - backend-reactive
+    networks:
+      - quiz-network
+
+  # Infrastructure
+  # MongoDB for Backend service
+  mongodb-words:
+    image: mongo:7.0
+    container_name: mongodb-words
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    healthcheck:
+      test: [ "CMD", "mongosh", "--eval", "db.runCommand('ping')" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - quiz-network
+
+volumes:
+  mongodb-data:
+
+networks:
+  quiz-network:
+    driver: bridge

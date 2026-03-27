@@ -1,0 +1,13 @@
+databaseChangeLog:
+  # Index on topic name for filtering concepts by topic
+  - changeSet:
+      id: 001-create-topic-name-index
+      author: developer
+      comment: "Create index on topic.name for efficient topic-based queries"
+      changes:
+        - createIndex:
+            collectionName: concepts
+            keys: |
+              { "topic.name": 1 }
+            options: |
+              { "name": "idx_concepts_topic_name" }
