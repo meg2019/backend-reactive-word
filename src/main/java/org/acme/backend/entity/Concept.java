@@ -131,7 +131,9 @@ public class Concept extends ReactivePanacheMongoEntity {
         );
         return mongoCollection().aggregate(pipeline, Document.class)
                 .collect().first()
-                .map(document -> document == null ? 0L : document.get("total", Number.class).longValue());
+                .map(document -> document == null
+                        ? 0L
+                        : document.get("total", Number.class).longValue());
     }
 
     public static Multi<String> getAllTopicName() {
