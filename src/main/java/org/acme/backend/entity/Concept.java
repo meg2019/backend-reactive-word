@@ -15,7 +15,7 @@ import java.util.*;
 
 import static com.mongodb.client.model.Aggregates.*;
 import static com.mongodb.client.model.Filters.*;
-import static com.mongodb.client.model.Projections.include;
+import static com.mongodb.client.model.Projections.*;
 
 @MongoEntity(collection = "concepts")
 public class Concept extends ReactivePanacheMongoEntity {
@@ -90,6 +90,7 @@ public class Concept extends ReactivePanacheMongoEntity {
             String targetWordDescription) {
     }
 
+    public record TopicsCountResult(long total) {}
 
     public static Uni<Long> getAllConceptsCount() {
         return count();
@@ -129,11 +130,9 @@ public class Concept extends ReactivePanacheMongoEntity {
                 group("$topic.name"),
                 Aggregates.count("total")
         );
-        return mongoCollection().aggregate(pipeline, Document.class)
+        return mongoCollection().aggregate(pipeline, TopicsCountResult.class)
                 .collect().first()
-                .map(document -> document == null
-                        ? 0L
-                        : document.get("total", Number.class).longValue());
+                .map(result -> result == null ? 0 : result.total);
     }
 
     public static Multi<String> getAllTopicName() {
@@ -143,7 +142,7 @@ public class Concept extends ReactivePanacheMongoEntity {
     public static Multi<WordPairEntry> getWordPairsByTopicNameAndLangs(String topicName,
                                                                        String sourceLang,
                                                                        String targetLang) {
-        if (StringUtils.isAllBlank(topicName, sourceLang, targetLang)) {
+        if (StringUtils.isAnyBlank(topicName, sourceLang, targetLang)) {
             return Multi.createFrom().empty();
         }
 
@@ -151,19 +150,58 @@ public class Concept extends ReactivePanacheMongoEntity {
         String targetLangLower = targetLang.toLowerCase();
 
         List<Bson> pipeline = List.of(
+                // ── Stage 1: Filter by topic name ──
+                // Uses idx_concepts_topic_name index for O(log n) lookup
+                // MongoDB: { $match: { topic: { $exists: true }, "topic.name": "Глаголы" } }
                 match(and(exists("topic"), eq("topic.name", topicName))),
-                // Find index of source and target languages in words array
-                project(new Document("sourceIdx", new Document("$indexOfArray", List.of("$words.language", sourceLangLower)))
-                        .append("targetIdx", new Document("$indexOfArray", List.of("$words.language", targetLangLower)))
-                        .append("words", "$words")),
-                // Only include where both languages exist (index >= 0)
+
+                // ── Stage 2: Find array positions of source & target languages ──
+                // $indexOfArray returns 0-based index of first match, or -1 if not found
+                // MongoDB: { $project: {
+                //     sourceIdx: { $indexOfArray: ["$words.language", "he"] },
+                //     targetIdx: { $indexOfArray: ["$words.language", "ru"] },
+                //     words: 1
+                // } }
+                project(fields(
+                        computed("sourceIdx",
+                                new Document("$indexOfArray",
+                                        List.of("$words.language", sourceLangLower))),
+                        computed("targetIdx",
+                                new Document("$indexOfArray",
+                                        List.of("$words.language", targetLangLower))),
+                        include("words")
+                )),
+
+                // ── Stage 3: Eliminate docs missing either language ──
+                // If indexOfArray returned -1, this document is filtered out
+                // MongoDB: { $match: { sourceIdx: { $gte: 0 }, targetIdx: { $gte: 0 } }
                 match(and(gte("sourceIdx", 0), gte("targetIdx", 0))),
-                // Extract words at found indices
-                project(new Document("sourceWord", new Document("$arrayElemAt", List.of("$words.text", "$sourceIdx")))
-                        .append("sourceWordDescription", new Document("$arrayElemAt", List.of("$words.comment", "$sourceIdx")))
-                        .append("targetWord", new Document("$arrayElemAt", List.of("$words.text", "$targetIdx")))
-                        .append("targetWordDescription", new Document("$arrayElemAt", List.of("$words.comment", "$targetIdx")))
-                ));
+
+                // ── Stage 4: Extract words at found positions, drop _id ──
+                // $arrayElemAt pulls the array element at the computed index
+                // MongoDB: { $project: {
+                //     sourceWord:            { $arrayElemAt: ["$words.text",    "$sourceIdx"] },
+                //     sourceWordDescription: { $arrayElemAt: ["$words.comment", "$sourceIdx"] },
+                //     targetWord:            { $arrayElemAt: ["$words.text",    "$targetIdx"] },
+                //     targetWordDescription: { $arrayElemAt: ["$words.comment", "$targetIdx"] },
+                //     _id: 0
+                // } }
+                project(fields(
+                        computed("sourceWord",
+                                new Document("$arrayElemAt",
+                                        List.of("$words.text", "$sourceIdx"))),
+                        computed("sourceWordDescription",
+                                new Document("$arrayElemAt",
+                                        List.of("$words.comment", "$sourceIdx"))),
+                        computed("targetWord",
+                                new Document("$arrayElemAt",
+                                        List.of("$words.text", "$targetIdx"))),
+                        computed("targetWordDescription",
+                                new Document("$arrayElemAt",
+                                        List.of("$words.comment", "$targetIdx"))),
+                        excludeId()
+                ))
+        );
         return mongoCollection().aggregate(pipeline, WordPairEntry.class);
     }
 }

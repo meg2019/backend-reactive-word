@@ -23,16 +23,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ConceptActiveRecordTest {
 
 
-    private static final String TOPIC_NAME_1 = "Глаголы";
-    private static final String TOPIC_NAME_2 = "UnExisting";
+    private static final String VERBS_TOPIC_NAME = "Глаголы";
+    private static final String UNEXISTING_TOPIC_NAME = "UnExisting";
     private static final String HE_LANG = "HE";
     private static final String RU_LANG = "RU";
 
 
     private static Stream<Arguments> findWordsByTopicNameTestCases() {
         return Stream.of(
-                Arguments.of(TOPIC_NAME_1, 200L),
-                Arguments.of(TOPIC_NAME_2, 0),
+                Arguments.of(VERBS_TOPIC_NAME, 200L),
+                Arguments.of(UNEXISTING_TOPIC_NAME, 0),
                 Arguments.of(null, 0),
                 Arguments.of("", 0),
                 Arguments.of(" ", 0)
@@ -55,13 +55,13 @@ public class ConceptActiveRecordTest {
     @DisplayName("Should return concepts by topic name")
     void shouldReturnConceptsByTOPIC_NAME_1(UniAsserter asserter) {
         asserter.assertThat(
-                () -> Concept.findAllConceptsByTopicName(TOPIC_NAME_1)
+                () -> Concept.findAllConceptsByTopicName(VERBS_TOPIC_NAME)
                         .collect()
                         .asList(),
                 conceptsList -> assertEquals(
                         100L,
                         conceptsList.size(),
-                        "We got %d concepts for topicName: '%s'".formatted(conceptsList.size(), TOPIC_NAME_1))
+                        "We got %d concepts for topicName: '%s'".formatted(conceptsList.size(), VERBS_TOPIC_NAME))
         );
     }
 
@@ -71,13 +71,13 @@ public class ConceptActiveRecordTest {
     @DisplayName("Should return concepts by topic name")
     void shouldReturnConceptsByTOPIC_NAME_3(UniAsserter asserter) {
         asserter.assertThat(
-                () -> Concept.findAllConceptsByTopicName(TOPIC_NAME_2)
+                () -> Concept.findAllConceptsByTopicName(UNEXISTING_TOPIC_NAME)
                         .collect()
                         .asList(),
                 conceptsList -> assertEquals(
                         0L,
                         conceptsList.size(),
-                        "We got %d concepts for topicName: '%s'".formatted(conceptsList.size(), TOPIC_NAME_2))
+                        "We got %d concepts for topicName: '%s'".formatted(conceptsList.size(), UNEXISTING_TOPIC_NAME))
         );
     }
 
@@ -149,7 +149,7 @@ public class ConceptActiveRecordTest {
                 actualResultList -> {
                     assertNotNull(actualResultList);
                     assertEquals(1, actualResultList.size());
-                    assertEquals(Set.of(TOPIC_NAME_1), new HashSet<>(actualResultList));
+                    assertEquals(Set.of(VERBS_TOPIC_NAME), new HashSet<>(actualResultList));
                 });
     }
 
@@ -176,7 +176,7 @@ public class ConceptActiveRecordTest {
     void shouldReturnWordPairsByTopicName(UniAsserter asserter) {
 
         asserter.assertThat(
-                () -> Concept.getWordPairsByTopicNameAndLangs(TOPIC_NAME_1, HE_LANG, RU_LANG)
+                () -> Concept.getWordPairsByTopicNameAndLangs(VERBS_TOPIC_NAME, HE_LANG, RU_LANG)
                         .collect()
                         .asSet(),
                 r -> {
@@ -185,7 +185,7 @@ public class ConceptActiveRecordTest {
                 });
 
         asserter.assertThat(
-                () -> Concept.getWordPairsByTopicNameAndLangs(TOPIC_NAME_2, HE_LANG, RU_LANG)
+                () -> Concept.getWordPairsByTopicNameAndLangs(UNEXISTING_TOPIC_NAME, HE_LANG, RU_LANG)
                         .collect()
                         .asSet(),
                 r -> {
@@ -195,7 +195,7 @@ public class ConceptActiveRecordTest {
 
 
         asserter.assertThat(
-                () -> Concept.getWordPairsByTopicNameAndLangs(TOPIC_NAME_1, "FR", RU_LANG)
+                () -> Concept.getWordPairsByTopicNameAndLangs(VERBS_TOPIC_NAME, "FR", RU_LANG)
                         .collect()
                         .asSet(),
                 r -> {
